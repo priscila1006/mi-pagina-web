@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje de Amor</title>
+</head>
+<body>
+    <h1>Hola mi amor &lt;3</h1>
+    <button onclick="preguntarMensaje()">¿Querés recibir un mensaje que te escribí?</button>
+
+    <script>
+        function preguntarMensaje() {
+            let mensaje = prompt("¿Querés recibir un mensaje que te escribí? (si/no): ");
+            if (mensaje.toLowerCase() === "si") {
+                comprobarPalabraClave();
+            } else {
+                alert("Fin del mensaje.");
+            }
+        }
+
+        function comprobarPalabraClave() {
+            while (true) {
+                let palabra_clave = prompt(`Primero tengo que comprobar que seas MI novio, así que pone una palabra 
+                que sabes que nos representa para poder recibir el mensaje: `);
+                
+                if (palabra_clave.toLowerCase() === "siempre") {
+                    alert(`Bueno amor, te voy a dar un par de opciones y vos vas a tener que elegir, pero primero...
+                    
+                    Quiero decirte que te amo muchísimo, sos el mejor novio del universo,
+                    realmente sos todo lo que siempre soñé, me haces demasiado feliz y voy a 
+                    hacer lo posible para que siempre sonrías principito, te amo para siempre.`);
+                    preguntarSegundoMensaje();
+                    break;
+                } else {
+                    alert("Palabra incorrecta. Intenta de nuevo.");
+                }
+            }
+        }
+
+        function preguntarSegundoMensaje() {
+            let mensaje_dos = prompt("Ahora quiero dejarte otro mensaje, con canciones de nuestra playlist. ¿Querés recibir este otro mensaje? (si/no):");
+            if (mensaje_dos.toLowerCase() === "si") {
+                alert("Ya te dije que te amo con toda mi alma? Mil veces, pero te lo voy a repetir siempre amorcito.");
+                let respuesta_mensaje = prompt("Ahora sí, si querés ver el otro mensajito pone (si amor):");
+                if (respuesta_mensaje.toLowerCase() === "si amor") {
+                    alert(`HOLA MI VIDA, ¿cómo estás?, ¿CÓMO DORMISTE? Estoy con ganas de decirte muchas cosas, de hacer algo lindo para vos,
+                    gracias por ser mi novio, estar con vos es ALGO MÁGICO, ya sé que me pongo CURSI con vos amor, pero bueno es que
+                    LO QUE SIENTO POR TI, ME TIENE MAL, mal porque te amo, porque sos parte de mí, porque sos MI MEDICINA.
+                    Quiero estar con vos el resto de mi vida, quiero ir a DONDE VAS, y yo sé que ASÍ SERÁ, que siempre vamos a estar juntos
+                    porque COMO TÚ, no hay nadie más. Me matan las ganas de estar con vos, en donde sea, o nos podemos ir a una CIUDAD MÁGICA
+                    con hadas, y cosas de cuentos, capaz ahí sí puedo ser tu PRINCESA de verdad. No quiero exagerar, pero TU ENCANTO no tiene comparación,
+                    tu RISA la quiero para tono de mi celular, ME GUSTA todo lo que sos, vos me gustas de una manera impresionante, quiero BESARTE MUCHO,
+                    no seré LA MUJER PERFECTA, pero al menos estoy LOCA por vos, sos KING OF MY HEART, ME CAMBIASTE LA VIDA, y yo sé que ERES PARA MÍ,
+                    además amores como el nuestro, ya no hay más, somos afortunados de ser HAPPY TOGETHER, porque es verdad, no me veo amando a nadie, pero
+                    a vos sí, y por el resto de la eternidad, solo quiero que nos amemos y seamos felices, te amo principito hermoso.`);
+                } else {
+                    alert("Fin del mensaje.");
+                }
+            } else {
+                alert("Fin del mensaje.");
+            }
+        }
+    </script>
+</body>
+</html>
